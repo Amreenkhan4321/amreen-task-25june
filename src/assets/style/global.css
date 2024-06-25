@@ -82,6 +82,7 @@ body{
   align-items: center;
   justify-content: center;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -149,7 +150,6 @@ body{
 }
 
 .card-title {
-  /* margin-top: 10px; */
   text-align: center;
 padding: 15px;
   font-size: 18px;
