@@ -1,0 +1,29 @@
+@media screen and (max-width: 768px) {
+    .card {
+      width: calc(50% - 20px);
+    }
+    .navbar-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .menu {
+      margin-top: 20px;
+      text-align: center;
+    }
+  
+    .menu li {
+      margin: 0 10px;
+    }
+  
+    .logout {
+      margin-top: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .card {
+      width: calc(100% - 20px);
+    }
+  }
+  
