@@ -160,7 +160,7 @@ padding: 15px;
 .read-more-button {
   margin-top: 10px;
   text-align: center;
-  padding: 8px 15px;
+  padding: 10px 15px;
   background-color: #fff;
   border: none;
   border-radius: 20px;
@@ -169,6 +169,7 @@ padding: 15px;
   cursor: pointer;
   font-weight: bold;
   font-size: 18px;
+  width: 100%;
 }
 
 .story-details {
@@ -190,6 +191,7 @@ padding: 15px;
   display: flex;
   align-items: flex-start;
 justify-content: flex-start;
+flex-wrap: wrap;
   
 }
 
@@ -270,6 +272,16 @@ flex-wrap: wrap;
 .completed{
   background-color: rgb(66 241 66);
 
+}
+
+.btn-inProgress {
+  color:  rgb(255, 205, 8);;
+}
+.btn-completed {
+  color:  rgb(66 241 66);
+}
+.btn-new {
+  color:  #26a0da;
 }
 
 .clear{
@@ -377,3 +389,5 @@ a{
   line-height: normal;
      
   }
+
+  
