@@ -7,8 +7,9 @@ import ClipLoader from "react-spinners/ClipLoader";
 const StoriesList = () => {
   const [stories, setStories] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [filter, setFilter] = useState("all");
 
-  console.log(stories, 100);
+  // console.log(stories, 100);
 
   const getList = async () => {
     setLoading(true);
@@ -28,6 +29,12 @@ const StoriesList = () => {
     getList();
   }, []);
 
+const filteredStories = stories.filter((data)=>{
+  if(filter === "all") return true;
+  return data?.Status === filter
+})
+console.log(filteredStories,"filteredStories")
+
   return (
     <div className="story-page">
       <Header />
@@ -35,13 +42,13 @@ const StoriesList = () => {
         <h1>Science Fiction Stories</h1>
       </div>
       <div className="btn-main">
-        <button class="btn new">New</button>
+        <button onClick={() => setFilter("Draft")} class="btn new">New</button>
 
-        <button class="btn progress">In Progress</button>
+        <button onClick={() => setFilter("In Progress")} class="btn progress">In Progress</button>
 
-        <button class="btn completed">Completed</button>
+        <button onClick={() => setFilter("Completed")} class="btn completed">Completed</button>
 
-        <button class="btn clear">Clear All</button>
+        <button onClick={() => setFilter("all")} class="btn clear">Clear All</button>
       </div>
       <div className="story-list">
         {loading ? (
@@ -49,7 +56,7 @@ const StoriesList = () => {
             <ClipLoader color="blue" />
           </div>
         ) : (
-          stories.map((story) => <StoryCard key={story._id} data={story} />)
+          filteredStories?.map((story) => <StoryCard key={story._id} data={story} />)
         )}
       </div>
     </div>
