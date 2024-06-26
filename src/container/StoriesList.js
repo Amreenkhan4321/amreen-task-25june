@@ -9,7 +9,6 @@ const StoriesList = () => {
   const [loading, setLoading] = useState(false);
   const [filter, setFilter] = useState("all");
 
-  // console.log(stories, 100);
 
   const getList = async () => {
     setLoading(true);
@@ -33,7 +32,6 @@ const filteredStories = stories.filter((data)=>{
   if(filter === "all") return true;
   return data?.Status === filter
 })
-console.log(filteredStories,"filteredStories")
 
   return (
     <div className="story-page">

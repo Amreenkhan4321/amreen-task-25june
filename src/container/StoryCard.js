@@ -5,7 +5,7 @@ const StoryCard = ({ data }) => {
 
   
   const getStatusClass = (status) => {
-    console.log(status); // For debugging purposes
+   
     switch (status) {
       case "Published":
         return "blue";

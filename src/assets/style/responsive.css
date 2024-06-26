@@ -1,4 +1,10 @@
 @media screen and (max-width: 768px) {
+  .profile-container {
+    bottom: 50px;
+  }
+  .profile-img {
+    bottom: 50px;
+  }
     .card {
       width: calc(50% - 20px);
     }
@@ -27,3 +33,15 @@
     }
   }
   
+  @media (min-width: 633px) {
+    .cards {
+      height: 290px;
+    
+    }
+  }
+
+  @media (max-width: 765px) {
+    .profile-container {
+       bottom: 50px;
+    }
+  }
